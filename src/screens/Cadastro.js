@@ -13,7 +13,7 @@ export default function Cadastro(){
     });
 
     async function handleCadastro(){
-        await api.postUser(user).then(
+        await api.postCadastro(user).then(
             (response)=>{
                 Alert.alert('OK',response.data.message)
             },(error)=>{
@@ -24,7 +24,7 @@ export default function Cadastro(){
         
     return(
         <View style={styles.container}>
-        <Text style={styles.title}> Faça Cadastro</Text>
+        <Text style={styles.title}> Faça o Cadastro</Text>
         <TextInput 
         style={styles.input}
         placeholder="CPF"
@@ -66,7 +66,7 @@ export default function Cadastro(){
         }}
         />
         <TouchableOpacity onPress={handleCadastro} style={styles.button}>
-            <Text>cadastrar</Text>
+            <Text>CADASTRAR</Text>
         </TouchableOpacity>
         </View>
     );
